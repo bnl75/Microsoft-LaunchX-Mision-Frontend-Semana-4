@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.75)), url("../assets/patron-pokemon.png");
+    background-repeat: repeat;
+    color: white;
+}
+
+#pokedex-desktop {
+    height: 80vh;
+    background-image: url("../assets/plantilla-vacia-desktop-pokedex-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#mitadIzquierdaDesktop > .row > .col-12 {
+    height: 6vh;
+}
+
+#mitadIzquierdaDesktop > .row> #boxImagenPokemonDesktop {
+    height: 16vh;
+}
+
+#mitadDerechaDesktop > .row > .col-12:first-child {
+    height: 20vh;
+}
+
+#mitadDerechaDesktop > .row > .col-12 {
+    height: 25vh;
+}
