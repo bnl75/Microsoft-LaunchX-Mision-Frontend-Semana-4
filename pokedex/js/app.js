@@ -1,7 +1,11 @@
 function buscarPokemon(pokemon = null) {
     //Obtengo el valor ingresado por el usuario y lo paso a minúsculas:
     let inputPokemon = document.getElementById('inputPokemon').value;
-    if(pokemon == null) pokemon = inputPokemon.toLowerCase();
+    let inputPokemonMobile = document.getElementById('inputPokemonMobile').value;
+    if(pokemon == null) {
+        if (inputPokemon.length > 0) pokemon = inputPokemon.toLowerCase();
+        else pokemon = inputPokemonMobile.toLowerCase();
+    }
     // console.log(inputPokemon);
 
     //Defino la URL a consultar de la API:
