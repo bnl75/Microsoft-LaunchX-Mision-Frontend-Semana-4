@@ -49,53 +49,99 @@ function buscarPokemon(pokemon = null) {
 
 function llenarInformacionBasica(nombre, id, imagen, tipo) {
     //Busco los elementos en el DOM:
-    const nombrePokemon = document.getElementById('nombrePokemonDesktop');
-    const idPokemon     = document.getElementById('idPokemonDesktop');
-    const imagenPokemon = document.getElementById('imagenPokemonDesktop');
-    const tipoPokemon   = document.getElementById('tipoPokemonDesktop');
+    const nombrePokemonDesktop = document.getElementById('nombrePokemonDesktop');
+    const idPokemonDesktop     = document.getElementById('idPokemonDesktop');
+    const imagenPokemonDesktop = document.getElementById('imagenPokemonDesktop');
+    const tipoPokemonDesktop   = document.getElementById('tipoPokemonDesktop');
+
+    const nombrePokemonMobile = document.getElementById('nombrePokemonMobile');
+    const idPokemonMobile     = document.getElementById('idPokemonMobile');
+    const imagenPokemonMobile = document.getElementById('imagenPokemonMobile');
+    const tipoPokemonMobile   = document.getElementById('tipoPokemonMobile');
 
     //Asigno la info de la API a los elementos del DOM:
-    nombrePokemon.innerText = nombre;
-    idPokemon.innerText     = id;
-    imagenPokemon.src       = imagen;
-    tipoPokemon.innerText   = tipo;
+    nombrePokemonDesktop.innerText = nombre;
+    idPokemonDesktop.innerText     = id;
+    imagenPokemonDesktop.src       = imagen;
+    tipoPokemonDesktop.innerText   = tipo;
+
+    nombrePokemonMobile.innerText = nombre;
+    idPokemonMobile.innerText     = id;
+    imagenPokemonMobile.src       = imagen;
+    tipoPokemonMobile.innerText   = tipo;
 } //llenarInformacionBasica
 
 
 
 function llenarEstadisticas(hp, attack, defense, specialAttack, specialDefense, speed) {
     //Busco los elementos en el DOM:
-    const hpProgressBar             = document.getElementById('hpProgressBarDesktop');
-    const attackProgressBar         = document.getElementById('attackProgressBarDesktop');
-    const defenseProgressBar        = document.getElementById('defenseProgressBarDesktop');
-    const specialAttackProgressBar  = document.getElementById('specialAttackProgressBarDesktop');
-    const specialDefenseProgressBar = document.getElementById('specialDefenseProgressBarDesktop');
-    const speedProgressBar          = document.getElementById('speedProgressBarDesktop');
+    const hpProgressBarDesktop             = document.getElementById('hpProgressBarDesktop');
+    const attackProgressBarDesktop         = document.getElementById('attackProgressBarDesktop');
+    const defenseProgressBarDesktop        = document.getElementById('defenseProgressBarDesktop');
+    const specialAttackProgressBarDesktop  = document.getElementById('specialAttackProgressBarDesktop');
+    const specialDefenseProgressBarDesktop = document.getElementById('specialDefenseProgressBarDesktop');
+    const speedProgressBarDesktop          = document.getElementById('speedProgressBarDesktop');
+
+    const hpProgressBarMobile             = document.getElementById('hpProgressBarMobile');
+    const attackProgressBarMobile         = document.getElementById('attackProgressBarMobile');
+    const defenseProgressBarMobile        = document.getElementById('defenseProgressBarMobile');
+    const specialAttackProgressBarMobile  = document.getElementById('specialAttackProgressBarMobile');
+    const specialDefenseProgressBarMobile = document.getElementById('specialDefenseProgressBarMobile');
+    const speedProgressBarMobile          = document.getElementById('speedProgressBarMobile');
 
     //Asigno la info de la API a los elementos del DOM:
-    hpProgressBar.style.width  = `${hp}%`;
-    hpProgressBar.ariaValueNow = hp;
-    hpProgressBar.innerText    = hp;
+    hpProgressBarDesktop.style.width  = `${hp}%`;
+    hpProgressBarDesktop.ariaValueNow = hp;
+    hpProgressBarDesktop.innerText    = hp;
 
-    attackProgressBar.style.width  = `${attack}%`;
-    attackProgressBar.ariaValueNow = attack;
-    attackProgressBar.innerText    = attack;
+    hpProgressBarMobile.style.width  = `${hp}%`;
+    hpProgressBarMobile.ariaValueNow = hp;
+    hpProgressBarMobile.innerText    = hp;
 
-    defenseProgressBar.style.width  = `${defense}%`;
-    defenseProgressBar.ariaValueNow = defense;
-    defenseProgressBar.innerText    = defense;
 
-    specialAttackProgressBar.style.width  = `${specialAttack}%`;
-    specialAttackProgressBar.ariaValueNow = specialAttack;
-    specialAttackProgressBar.innerText    = specialAttack;
+    attackProgressBarDesktop.style.width  = `${attack}%`;
+    attackProgressBarDesktop.ariaValueNow = attack;
+    attackProgressBarDesktop.innerText    = attack;
 
-    specialDefenseProgressBar.style.width  = `${specialDefense}%`;
-    specialDefenseProgressBar.ariaValueNow = specialDefense;
-    specialDefenseProgressBar.innerText    = specialDefense;
+    attackProgressBarMobile.style.width  = `${attack}%`;
+    attackProgressBarMobile.ariaValueNow = attack;
+    attackProgressBarMobile.innerText    = attack;
 
-    speedProgressBar.style.width  = `${speed}%`;
-    speedProgressBar.ariaValueNow = speed;
-    speedProgressBar.innerText    = speed;
+
+    defenseProgressBarDesktop.style.width  = `${defense}%`;
+    defenseProgressBarDesktop.ariaValueNow = defense;
+    defenseProgressBarDesktop.innerText    = defense;
+
+    defenseProgressBarMobile.style.width  = `${defense}%`;
+    defenseProgressBarMobile.ariaValueNow = defense;
+    defenseProgressBarMobile.innerText    = defense;
+
+
+    specialAttackProgressBarDesktop.style.width  = `${specialAttack}%`;
+    specialAttackProgressBarDesktop.ariaValueNow = specialAttack;
+    specialAttackProgressBarDesktop.innerText    = specialAttack;
+
+    specialAttackProgressBarMobile.style.width  = `${specialAttack}%`;
+    specialAttackProgressBarMobile.ariaValueNow = specialAttack;
+    specialAttackProgressBarMobile.innerText    = specialAttack;
+
+
+    specialDefenseProgressBarDesktop.style.width  = `${specialDefense}%`;
+    specialDefenseProgressBarDesktop.ariaValueNow = specialDefense;
+    specialDefenseProgressBarDesktop.innerText    = specialDefense;
+
+    specialDefenseProgressBarMobile.style.width  = `${specialDefense}%`;
+    specialDefenseProgressBarMobile.ariaValueNow = specialDefense;
+    specialDefenseProgressBarMobile.innerText    = specialDefense;
+
+
+    speedProgressBarDesktop.style.width  = `${speed}%`;
+    speedProgressBarDesktop.ariaValueNow = speed;
+    speedProgressBarDesktop.innerText    = speed;
+
+    speedProgressBarMobile.style.width  = `${speed}%`;
+    speedProgressBarMobile.ariaValueNow = speed;
+    speedProgressBarMobile.innerText    = speed;
 } //llenarEstadisticas
 
 
@@ -103,21 +149,24 @@ function llenarEstadisticas(hp, attack, defense, specialAttack, specialDefense, 
 function llenarMovimientos(movimientos) {
     let totalMovimientos  = movimientos.length;
     let limiteMovimientos = 6;
-    let elementos = '';
+    let elementosDesktop = elementosMobile = '';
 
     if(totalMovimientos < limiteMovimientos) limiteMovimientos = totalMovimientos;
 
-    const boxMovimientos = document.getElementById('boxMovimientosDesktop');
+    const boxMovimientosDesktop = document.getElementById('boxMovimientosDesktop');
+    const boxMovimientosMobile = document.getElementById('boxMovimientosMobile');
 
     for (let index = 0; index < limiteMovimientos; index++) {
         const movimiento  = movimientos[index].move.name;
         let nuevoElemento = `<span class="badge rounded-pill bg-warning text-dark m-2">${movimiento}</span>`;
-        elementos += nuevoElemento;
+        elementosDesktop += nuevoElemento;
+        if (index < 4) elementosMobile += nuevoElemento;
         // console.log(movimiento);
     }
 
     // console.log(movimientos);
-    boxMovimientos.innerHTML = elementos;
+    boxMovimientosDesktop.innerHTML = elementosDesktop;
+    boxMovimientosMobile.innerHTML = elementosMobile;
 } //llenarMovimientos
 
 
